@@ -1,22 +1,23 @@
 
 
 import React from "react";
-import { BrowserRouter as Router,Route,Switch } from "react-router-dom";
+import { BrowserRouter,Routes,Route} from "react-router-dom";
 import Search from "./Component/Search";
 import Postpublished from './Component/Postpublished';
 import Home from "./Component/Home";
 import Searchpage from "./Component/Searchpage";
 import Openforms from "./Component/Openforms";
-const BrowserRouter =require("react-router-dom").BrowserRouter;
-const Route = require("react-router-dom").Route;
-const Link =require("react-router-dom").Link;
+// const BrowserRouter =require("react-router-dom").BrowserRouter;
+// const route = require("react-router-dom").Route;
+// const Link =require("react-router-dom").Link;
+
 function App(){
 
          return(
-            <Router>
+            <BrowserRouter>
                 <div className="APP">
                     <Search/>
-                    <Switch>
+                    <Routes>
                         <Route exact path="/">
                             <Home/>
                         </Route>
@@ -30,9 +31,9 @@ function App(){
 
 
 
-                    </Switch>
+                    </Routes>
                 </div>
-            </Router>
+            </BrowserRouter>
          )
         
          

@@ -2,12 +2,12 @@ import React,{ Component } from 'react';
 import { useReducer } from "react";
 import {Link} from 'react-router-dom'
 const Search=()=>{
-    const [SearchVal,searchVal] = useReducer("");
+    const [SearchVal,setsearchVal] = useReducer("");
     return(
         <nav>
             <div>
-                <Link to={`search${searchVal}`}></Link>
-                <input type="search" value={searchVal} onChange={(e)=>{setsearchVal(e.target.value)}}/>
+                <Link to={`search${SearchVal}`}></Link>
+                <input type="search" value={SearchVal} onChange={(e)=>{setsearchVal(e.target.value)}}/>
                 <button onClick={()=>{setsearchVal("")}}>clear</button>
             </div>
             {/* <div>

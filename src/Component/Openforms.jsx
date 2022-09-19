@@ -1,14 +1,14 @@
 import React,{ Component } from 'react';
-import ReactDOM from 'react-router-dom';
-import { useReducer } from "react-router-dom";
+// import ReactDOM from 'react-router-dom';
+import { useReducer } from "react";
 const Openforms=()=>{
 
     const [title,settitle]= useReducer("");
     const [body,setbody ] =useReducer("");
     let handlePublish =(e)=>{e.preventDefault();
-     let newState= Reducer(title,body);
+    //  let newState= Reducer(title,body);
     let a=JSON.parse(localStorage.getItem("article"));
-        a.push(newState);
+        // a.push(newState);
         a=JSON.stringify(a);
 
         localStorage.setItem("article",a);

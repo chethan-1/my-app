@@ -1,3 +1,4 @@
+import React from "react";
 import { useEffect  , useReducer } from "react";
 
 import Articlelist from "./Articlelist";
@@ -22,11 +23,11 @@ const Home =()=>{
 
            },[])
            return(
-            <div>
+            <>
                 <h1>lists of articles</h1>
                 <hr/>
                 <Articlelist article={article}/>
-            </div>
+            </>
            );
 }
  

@@ -23,7 +23,7 @@ const [article , setarticle]= useReducer(null);
    return(
     <div>
         <h1>HELLO</h1>
-        {article && <Articlelist article={ article.filter((article)=>{return article.title.includes(Searchval)})}/>}
+        {article && <Articlelist article={ article.filter((article)=>{return article.title.includes(searchVal)})}/>}
     </div>
    )
 
